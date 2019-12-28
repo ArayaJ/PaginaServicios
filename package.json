@@ -1,4 +1,25 @@
 {
+  "name": "paginaservicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch",
+    "build-babel": "babel src -d output --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArayaJ/PaginaServicios.git"
+  },
+  "author": "Jesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArayaJ/PaginaServicios/issues"
+  },
+  "homepage": "https://github.com/ArayaJ/PaginaServicios#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
@@ -6,9 +27,5 @@
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
-  },
-  "scripts": {
-      "build": "webpack --watch",
-    "build-babel": "babel src -d output --watch"
   }
 }
