@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Servicios</title>
+    <script src="https://kit.fontawesome.com/705c57b381.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./Estilos/styles.css">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" href="./Estilos/styles.css"> <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <style href="./Estilos/styles.css"> </style> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-378139-21']); _gaq.push(['_gat._anonymizeIp']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script');ga.type = 'text/javascript';ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s); })(); </script></head>
+
 </head>
 <body>
-    <header class="logo"></header>
- <Nav class="NavMenu">   
+    <div >
+    <a style="text-decoration: none;" href="https://www.zeitverschiebung.net/es/timezone/america--costa_rica" target="_parent"></a>
+     <div class="small" id="clock"> <div class="date"></div> <div class="time"><span class="hour"></span>:<span class="minute"></span>:<span class="second"></span></div> </div> </a> <script type="text/javascript"> $(document).ready(function() { $("div#clock").simpleClock(-6); }); (function ($) { $.fn.simpleClock = function ( utc_offset ) { var language = "es"; switch (language) { case "de": var weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."]; var months = ["Jan.", "Feb.", "M�r.", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."]; break; case "es": var weekdays = ["Dom", "Lun", "Mar", "Mi�", "Jue", "Vie", "S�b"]; var months = ["Ene", "Feb", "Mar", "Abr", "Mayo", "Jun", "Jul", "Ago", "Sept", "Oct", "Nov", "Dic"]; break; case "fr": var weekdays = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]; var months = ["Jan", "F�v", "Mars", "Avr", "Mai", "Juin", "Juil", "Ao�t", "Sept", "Oct", "Nov", "D�c"]; break; default: var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]; break; } var clock = this; function getTime() { var date = new Date(); var nowUTC = date.getTime() + date.getTimezoneOffset()*60*1000; date.setTime( nowUTC + (utc_offset*60*60*1000) ); var hour = date.getHours(); if ( language == "en" ) { suffix = (hour >= 12)? 'p.m.' : 'a.m.'; hour = (hour > 12)? hour -12 : hour; hour = (hour == '00')? 12 : hour; } return { day: weekdays[date.getDay()], date: date.getDate(), month: months[date.getMonth()], year: date.getFullYear(), hour: appendZero(hour), minute: appendZero(date.getMinutes()), second: appendZero(date.getSeconds()) }; } function appendZero(num) { if (num < 10) { return "0" + num; } return num; } function refreshTime(clock_id) { var now = getTime(); clock = $.find('#'+clock_id); $(clock).find('.date').html(now.day + ', ' + now.date + '. ' + now.month + ' ' + now.year); $(clock).find('.time').html("<span class='hour'>" + now.hour + "</span>:<span class='minute'>" + now.minute + "</span>:<span class='second'>" + now.second + "</span>"); if ( typeof(suffix) != "undefined") { $(clock).find('.time').append('<strong>'+ suffix +'</strong>'); } } var clock_id = $(this).attr('id'); refreshTime(clock_id); setInterval( function() { refreshTime(clock_id) }, 1000); }; })(jQuery); </script> 
+    </div>
+    <header class="logo">
+        
+    <img src="img/logo.png">
+    </header>
+    
+ <Nav class="NavMenu">
      <ul class="Menu">
+
          <li><a href="">Dólar a colones</a></li>
          <li><a href="">Lotería</a></li>
          <li><a href="">Clima</a></li>
          <li><a href="">Horario de buses</a></li>
          <li><a href="">Calendario de feriados</a></li>
          <li><a href="">Precio Gasolina</a></li>
+         
      </ul>
+     
  </Nav>
+ 
  <section class="Main">
-    <article class="item1">
+    <aside class="item1">
         <h2>Publicidad</h2>
      
-    </article>
+    </aside>
+
     <article>
-        <h1>Bienvenidos</h1>
+        
+        <h1>Bienvenidos</h1>        
         <div>
-            <h2>Dólar a colones</h2>
+            
+            
+            <h3> <i class="far fa-money-bill-alt"></i>  Dólar a colones</h3>
+            
         </div>
         <div>
-            <h2>Lotería</h2>
+            <h3><i class="fas fa-hands-helping"></i>  Lotería</h3>
         </div>
         <div>
-            <h2>Clima</h2>
+            <h3><i class="fas fa-cloud-sun"></i>  Clima</h3>
         </div>
         <div>
-            <h2>Horario de buses</h2>
+            <h3><i class="fas fa-bus-alt"></i>  Horario de buses</h3>
         </div>
         <div>
-            <h2>Calendario de feriados</h2>
+            <h3><i class="far fa-calendar-alt"></i>  Calendario de feriados</h3>
         </div>
         <div>
-            <h2>Precio Gasolina</h2>
+            <h3><i class="fas fa-gas-pump"></i>  Precio Gasolina</h3>
         </div>
     </article>
-    <article class="item2">
+    <aside class="item2">
         <h2>Publicidad</h2>
 
- </article>
+ </aside>
  </section>
  <footer></footer>
     <script type="text/javascript" src="bundle.js"></script>
